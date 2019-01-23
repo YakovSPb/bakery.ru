@@ -38,22 +38,82 @@ html, body
 	height: 100%
 
 body
-	font-size: 16px
+	font-size: 14px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $default-font
+	font-family: "ProximaNova", sans-serif
 	overflow-x: hidden
+	color: $header
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6	
 	line-height: 1.4
 	margin: 0
 	padding: 0
+	color: $header
+
+h1, .h1
+	font-size: 92px
+	color: #ffffff
+	letter-spacing: 0.75px
+	font-family: "PlayFairDisplay", sans-serif
+	white-space: nowrap
+h2, .h2
+	font-size: 48px
 	
- ul, li
+ul, li, p
 	padding: 0
 	margin: 0
-	
+
+a, a:focus, a:active
+	color: $accent
+a:hover
+	color: $accent
+	text-decoration: underline
+
+.button
+	display: inline-block
+	border: #dfc691 1px dashed
+	font-family: "Alegreya", sans-serif
+	font-weight: bold
+	color: #dfc691
+	text-decoration: none
+	background-color: #fff
+	padding: 12px 30px
+	font-size: 18px
+	text-transform: uppercase
+	letter-spacing: 0.5px
+	border-radius: 0
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32
+
+.button-head
+	background-color: rgba($header, .53)
+	padding: 7px 50px
+	color: #ffffff
+	font-size: 14px
+	letter-spacing: 3px
+	border-color: #9e9c93
+
+.button-trans
+	background-color: transparent
+	padding: 8px 70px
+	color: $accent
+	border-color: #9e9c93
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -66,4 +126,95 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	background-color: $accent
 	color: #fff
 
+.site-header
+	min-height: 900px
+	height: 100vh
+	background-image: url(../img/bg-1.jpg)
+	background-repeat: no-repeat
+	background-position: center top
+	background-size: 100%
+	position: relative
+
+.logo
+	font-family: "Scriptina", sans-serif
+	text-align: center
+	font-size: 30px
+	line-height: 70px
+	letter-spacing: 3px
+	a
+		color: #ffffff
+		transition: opacity .5s ease
+		&:hover, &:focus
+			text-decoration: none
+			opacity: .7
+
+.top-line
+	background-color: rgba($header, .53)
+	position: absolute
+	width: 100%
+	z-index: 2
+.header-menu
+	ul
+		li
+			display: inline-block
+			padding: 30px 30px
+			font-family: "Alegreya", sans-serif
+			text-transform: uppercase
+			position: relative
+			letter-spacing: 3px
+			&:first-child
+				padding-left: 0
+			&:last-child
+				padding-right: 0
+			&::after
+				content: "~"
+				position: absolute
+				right: -5px
+				top: 30px
+				color: #fff
+			&:last-child
+				&::after
+					content: ""
+
+			a
+				color: #ffffff
+
+.hamburger
+	position: absolute
+	top: 12px
+	right: 10px
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	background-color: #fff
+
+.header-social
+	position: relative
+	.soc
+		ul
+			li
+				display: inline-block
+				list-style-type: none
+				margin-right: 30px
+				margin-top: 24px
+				.fa
+					color: #ffffff
+					font-size: 15px
+					padding: 10px 0
+					transition: opacity .5s ease
+					&:hover
+						opacity: .7
+
+.header-flex
+	display: flex
+	height: 100%
+	position: relative
+	top: 0
+	.flex-center
+		margin: auto
+		.header-composition
+			text-align: center
+			position: relative
+			p
+				color: #ffffff
+				font-size: 24px
+				font-family: "ProximaNova", sans-serif
 @import "media" // Всегда в конце
