@@ -46,7 +46,7 @@ body
 	overflow-x: hidden
 	color: $header
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6	
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	line-height: 1.4
 	margin: 0
 	padding: 0
@@ -60,7 +60,7 @@ h1, .h1
 	white-space: nowrap
 h2, .h2
 	font-size: 48px
-	
+
 ul, li, p
 	padding: 0
 	margin: 0
@@ -179,12 +179,6 @@ a:hover
 			a
 				color: #ffffff
 
-.hamburger
-	position: absolute
-	top: 12px
-	right: 10px
-.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
-	background-color: #fff
 
 .header-social
 	position: relative
@@ -203,6 +197,7 @@ a:hover
 					&:hover
 						opacity: .7
 
+
 .header-flex
 	display: flex
 	height: 100%
@@ -217,4 +212,62 @@ a:hover
 				color: #ffffff
 				font-size: 24px
 				font-family: "ProximaNova", sans-serif
+
+
+
+//Mobile menu
+.hamburger
+	position: absolute
+	display: none
+	top: 12px
+	right: 10px
+	z-index: 10
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	background-color: #fff
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before
+	background-color: #fff
+.mm-navbar
+	position: relative
+	border: none
+	.mm-navbar__title
+		padding: 0
+		.logo
+			color: #ffffff
+			line-height: 40px
+			margin-bottom: 20px
+.mm-panel::after, .mm-panel::before
+	height: 0
+
+.mm-panels > .mm-panel > .mm-listview:first-child, .mm-panels > .mm-panel > .mm-navbar + .mm-listview
+	margin: 0
+
+html.mm-opened
+	overflow-y: scroll
+.mm-panels > .mm-panel.mm-hasnavbar
+	right: -18px
+
+.mm-listitem::after
+	display: none
+.mm-panels, .mm-panels > .mm-panel
+	top: -15px
+
+.mm-listview
+	> li
+		> a
+			padding:
+				left: 10%
+				right: 10%
+				top: 5px
+			&::before
+				content: '\f005'
+				font-family: 'FontAwesome'
+				margin-right: 20px
+				color: #ffffff
+		&.active
+			&>a
+				color: $accent
+.mm-panels > .mm-panel > .mm-listview:first-child, .mm-panels > .mm-panel > .mm-navbar + .mm-listview
+	margin-top: 30px
+//END MOBILE MENU//
+
 @import "media" // Всегда в конце
