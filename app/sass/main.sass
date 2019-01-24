@@ -52,12 +52,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	padding: 0
 	color: $header
 
-h1, .h1
-	font-size: 92px
-	color: #ffffff
-	letter-spacing: 0.75px
-	font-family: "PlayFairDisplay", sans-serif
-	white-space: nowrap
 h2, .h2
 	font-size: 48px
 
@@ -107,6 +101,8 @@ a:hover
 	font-size: 14px
 	letter-spacing: 3px
 	border-color: #9e9c93
+	&:hover
+		background-color: $header
 
 .button-trans
 	background-color: transparent
@@ -131,8 +127,8 @@ a:hover
 	height: 100vh
 	background-image: url(../img/bg-1.jpg)
 	background-repeat: no-repeat
-	background-position: center top
-	background-size: 100%
+	background-position: center
+	background-size: cover
 	position: relative
 
 .logo
@@ -197,7 +193,6 @@ a:hover
 					&:hover
 						opacity: .7
 
-
 .header-flex
 	display: flex
 	height: 100%
@@ -208,11 +203,32 @@ a:hover
 		.header-composition
 			text-align: center
 			position: relative
+			h1
+				font-size: 92px
+				color: #ffffff
+				letter-spacing: 0.75px
+				font-family: "PlayFairDisplay", sans-serif
+				position: relative
+				margin-bottom: 110px
+				&::after
+					content: ''
+					width: 200px
+					background-image: url(../img/dashed_line.png)
+					position: absolute
+					height: 14px
+					left: 39%
+					bottom: -56px
+					background-repeat: no-repeat
 			p
 				color: #ffffff
 				font-size: 24px
 				font-family: "ProximaNova", sans-serif
-
+				letter-spacing: 1px
+				margin-bottom: 60px
+				line-height: 36px
+				padding:
+					left: 120px
+					right: 120px
 
 
 //Mobile menu
@@ -251,9 +267,14 @@ html.mm-opened
 .mm-panels, .mm-panels > .mm-panel
 	top: -15px
 
+.mm-panel
+  padding:
+    left: 0
+    right: 0
 .mm-listview
 	> li
 		> a
+			font-size: 18px
 			padding:
 				left: 10%
 				right: 10%
@@ -268,6 +289,7 @@ html.mm-opened
 				color: $accent
 .mm-panels > .mm-panel > .mm-listview:first-child, .mm-panels > .mm-panel > .mm-navbar + .mm-listview
 	margin-top: 30px
+
 //END MOBILE MENU//
 
 @import "media" // Всегда в конце

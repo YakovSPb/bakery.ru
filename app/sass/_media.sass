@@ -30,7 +30,7 @@
 @media only screen and (max-width : 1200px)
   .hamburger
     display: block
-  .header-social
+  .header-social, .header-menu
     display: none
 
 
@@ -42,12 +42,19 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	.header-flex .flex-center .header-composition h1
+      font-size: 60px
+
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.header-flex .flex-center .header-composition p
+      padding: 0
+
+	.header-flex .flex-center .header-composition h1::after
+      left: 20%
+
 
 
 /* Custom, iPhone Retina */
