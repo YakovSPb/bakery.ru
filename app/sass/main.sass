@@ -453,12 +453,12 @@ html.mm-opened
 
 //SECTION PANCAKES//
 .pancakes
-	min-height: 760px
+	min-height: 700px
 	background-image: url(../img/bg-2.jpg)
 	background-position: top center
 	background-size: cover
 	position: relative
-
+	padding: 140px 0 100px
 
 //SLIDER//
 
@@ -480,6 +480,7 @@ html.mm-opened
 		max-width: 410px
 		height: auto
 		display: none
+		transition: all .5s ease
 	.on
 		display: block
 
@@ -490,7 +491,7 @@ html.mm-opened
 	font-weight: bold
 	float: left
 	width: 530px
-	height: 510px
+	min-height: 510px
 	position: relative
 	padding:
 		left: 50px
@@ -584,9 +585,12 @@ html.mm-opened
 					width: 90px
 					height: 90px
 					border-radius: 10em
+					transition: opacity .5s ease
+					&:hover
+						opacity: .7
 
-.owl-next, .owl-prev
-	overflow-x: hidden
+.next, .prev
+	overflow: hidden
 	width: 30px
 	height: 30px
 	border-radius: 10em
@@ -596,6 +600,7 @@ html.mm-opened
 	text-align: center
 	transition: all .5s ease
 	position: absolute
+	cursor: pointer
 	span
 		font-size: 30px
 		line-height: 22px
@@ -603,14 +608,39 @@ html.mm-opened
 		color: #5e5b54
 		border: #5e5b54 2px solid
 
-.owl-next
+.next
 	right: -30px
 	bottom: 25px
+	position: absolute
+	&::after
+		content: '\f105'
+		font-family: "FontAwesome", sans-serif
+		font-size: 22px
+		position: absolute
+		top: 0
+		left: 0
+		margin-left: 9px
+		line-height: 27px
 
-.owl-prev
+
+.prev
 	left: -54px
 	bottom: 25px
+	&::after
+		content: '\f104'
+		font-family: "FontAwesome", sans-serif
+		font-size: 22px
+		position: absolute
+		top: 0
+		left: 0
+		line-height: 29px
+		margin-left: 8px
+		line-height: 27px
 
+
+
+.owl-nav
+	display: none
 
 //END SLIDER//
 

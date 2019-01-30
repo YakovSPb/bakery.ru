@@ -65,7 +65,7 @@
 		top: 248px
 	.art-content
 		margin-top: 50px
-	.slide .slide-wrap .readyin
+	.readyin
 		top: 0px
 		right: 0px
 		width: 100px
@@ -81,32 +81,40 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	.slide 
-		.slide-wrap 
-			.food-image
-				float: none
-				position: absolute
-				left: 10px
-				top: 150px
-				z-index: 100
-				clip-path: none
-				&::after
-					display: none
-				img
-					max-width: 100px
-			.food-content
-				border-left: none
-				width: 100%
-				&::before
-				 display: none
-				h4
-					text-align: center
-					margin-top: 50px
-				span
-					text-align: center
-					display: block
-				>p
-					margin-top: 20px
+	.pancakes
+		padding: 60px 0
+
+	.food-image
+		float: none
+		position: absolute
+		left: 15%
+		top: 72px
+		z-index: 100
+		clip-path: none
+		&::after
+			display: none
+		img
+			max-width: 200px
+
+	.food-content
+		border-left: none
+		width: 100%
+		&::before
+		 display: none
+		h4
+			text-align: center
+			margin-top: 180px
+		span
+			text-align: center
+			display: block
+		>p
+			margin-top: 20px
+		p
+			margin-top: 5px
+			padding-bottom: 150px
+
+
+
 
 
 
@@ -128,9 +136,26 @@
 @media only screen and (max-width : 480px)
 	.header-flex .flex-center .header-composition p
 			padding: 0
-	.slide .slide-wrap .food-content h4 
-	    margin-top: 70px
+	.food-content 
+		padding-right: 15px
+		padding-left: 15px
+		h4 
+	    margin-top: 190px 
+	    margin-bottom: 10px
 	    line-height: 43px		
+		p
+	  	padding-bottom: 120px
+	.min-slider
+		left: 52px
+		margin: 0	
+		bottom: 20px
+		width: 200px
+	.prev 
+	    left: -38px
+	.readyin
+	 	width: 80px
+	 	height: 90px
+
 
 	.header-flex .flex-center .header-composition h1
 			white-space: normal
@@ -151,7 +176,7 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	.slide .slide-wrap .readyin
+	.readyin
 		right: 15px
 
 

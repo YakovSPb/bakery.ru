@@ -2,14 +2,34 @@ $(function() {
 
 
 //SLIDER//
+  $(".next").click(function() {
+    $('.slider2').trigger('next.owl.carousel');
+  })
+  $(".prev").click(function() {
+    $('.slider2').trigger('prev.owl.carousel');
+  });
 
 
 $('.slider2').owlCarousel({
     loop : true,
+    margin:10,
     items: 3,
+    smartSpeed: 700,
     itemClass: "slide-wrap",
     nav: true,
-    dots: false
+    navText: [''],
+    dots: false,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:false,
+        },
+        480:{
+            items:3,
+            nav:true
+        },
+     }
 });
 
 
@@ -17,10 +37,14 @@ $('.on1').click(function(){
     
   $('.food-image img').removeClass('on');
 
+
   $('.food-image img:nth-child(1)').addClass('on'); 
 
   $('.food-text').removeClass('ton');
   $('.food-text:nth-child(1)').addClass('ton');
+  $('.food-image img:nth-child(1)').css('opacity', '0'); 
+  $('.food-image img:nth-child(1)').fadeTo( 100, 1, "linear" );
+
 });
 
 
@@ -29,9 +53,12 @@ $('.on2').click(function(){
   $('.food-image img').removeClass('on');
 
   $('.food-image img:nth-child(2)').addClass('on');
+  $('.food-image img:nth-child(2)').css('opacity', '0'); 
+  $('.food-image img:nth-child(2)').fadeTo( 100, 1, "linear" );
 
   $('.food-text').removeClass('ton');
   $('.food-text:nth-child(2)').addClass('ton');
+
 });
 
 
@@ -42,6 +69,9 @@ $('.on3').click(function(){
   $('.food-image img:nth-child(3)').addClass('on');
   $('.food-text').removeClass('ton');
   $('.food-text:nth-child(3)').addClass('ton');
+  $('.food-image img:nth-child(3)').css('opacity', '0'); 
+  $('.food-image img:nth-child(3)').fadeTo( 100, 1, "linear" );
+
 });
 
 
@@ -52,15 +82,11 @@ $('.on4').click(function(){
   $('.food-image img:nth-child(4)').addClass('on');
   $('.food-text').removeClass('ton');
   $('.food-text:nth-child(4)').addClass('ton');
+  $('.food-image img:nth-child(4)').css('opacity', '0'); 
+  $('.food-image img:nth-child(4)').fadeTo( 100, 1, "linear" );
+
 });
 
-
-    // $('#on2').click(function(){
-        
-    //       $('.food-image img').removeClass('on');
-
-    //     $('.food-image img:nth-child(1)').addClass('on');
-    // });
 
 
 //MENU//
