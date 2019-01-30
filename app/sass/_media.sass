@@ -3,63 +3,156 @@
 /*==========  Desktop First  ==========*/
 
 @media only screen and (min-width: 1300px)
-  .container
-    width: 1240px
+	.container
+		width: 1240px
 
 
 @media only screen and (min-width: 1400px)
-  .container
-    width: 1340px
+	.container
+		width: 1340px
 
 @media only screen and (min-width: 1500px)
-  .container
-    width: 1440px
+	.container
+		width: 1440px
 
 @media only screen and (min-width: 1720px)
-  .container
-    width: 1600px
+	.container
+		width: 1600px
+		padding:
+			left: 5.5%
+			right: 5.5%
+
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1500px)
-  .header-menu ul li
-    padding: 30px 16px
+	.header-menu ul li
+		padding: 30px 16px
 
 
+
+@media only screen and (max-width : 1400px)
+	/**/
+
+@media only screen and (max-width : 1300px)
+	.testes-wrap
+		margin: 0 auto
+		.teste
+			img
+				width: 250px
+	.testes-wrap::before
+		top: 120px
+		left: 114px
+	.testes-wrap .so-good
+		left: 181px
+		top: 218px
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-  .hamburger
-    display: block
-  .header-social, .header-menu
-    display: none
-
-
+	.hamburger
+		display: block
+	.header-social, .header-menu
+		display: none
+	.testes-wrap
+		margin: 0 auto
+		.teste
+			img
+				width: 290px
+	.testes-wrap::before
+		top: 156px
+		left: 159px
+	.testes-wrap .so-good
+		left: 222px
+		top: 248px
+	.art-content
+		margin-top: 50px
+	.slide .slide-wrap .readyin
+		top: 0px
+		right: 0px
+		width: 100px
+		height: 100px
+		padding-top: 0
+		strong
+			font-size: 14px
+		b
+			margin-top: 0
+			font-size: 48px
+		p
+			margin-top: 9px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.slide 
+		.slide-wrap 
+			.food-image
+				float: none
+				position: absolute
+				left: 10px
+				top: 150px
+				z-index: 100
+				clip-path: none
+				&::after
+					display: none
+				img
+					max-width: 100px
+			.food-content
+				border-left: none
+				width: 100%
+				&::before
+				 display: none
+				h4
+					text-align: center
+					margin-top: 50px
+				span
+					text-align: center
+					display: block
+				>p
+					margin-top: 20px
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.header-flex .flex-center .header-composition h1
-      font-size: 60px
-
+			font-size: 60px
+	.testes-wrap
+			width: 100%
+			text-align: center
+			.teste
+				float: none
+	.testes-wrap::before, .so-good
+			display: none
+			
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.header-flex .flex-center .header-composition p
-      padding: 0
+			padding: 0
+	.slide .slide-wrap .food-content h4 
+	    margin-top: 70px
+	    line-height: 43px		
 
-	.header-flex .flex-center .header-composition h1::after
-      left: 20%
+	.header-flex .flex-center .header-composition h1
+			white-space: normal
 
+	.art-content p
+			padding: 0
+			margin-top: 40px
 
+	.art-content .chef
+			.benito
+				span
+					padding:
+						left: 0
+						right: 0
+			.quote
+				padding: 0
+	
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
+	.slide .slide-wrap .readyin
+		right: 15px
 
 
 /*==========  Mobile First  ==========*/
