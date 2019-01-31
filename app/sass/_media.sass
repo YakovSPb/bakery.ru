@@ -50,7 +50,7 @@
 @media only screen and (max-width : 1200px)
 	.hamburger
 		display: block
-	.header-social, .header-menu
+	.header-social, .header-menu, .copy, .copy2
 		display: none
 	.testes-wrap
 		margin: 0 auto
@@ -78,11 +78,19 @@
 			font-size: 48px
 		p
 			margin-top: 9px
+	.breakfast-menu
+		margin-left: 0
+		float: none
+		margin: 0 auto
+
+
+	.breakfast .breakfast-wrap .breakfast-content
+		float: none
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	.pancakes
-		padding: 60px 0
+	.pancakes, .breakfast
+		padding: 30px 0
 
 	.food-image
 		float: none
@@ -103,7 +111,7 @@
 		 display: none
 		h4
 			text-align: center
-			margin-top: 180px
+			margin-top: 210px
 		span
 			text-align: center
 			display: block
@@ -112,9 +120,6 @@
 		p
 			margin-top: 5px
 			padding-bottom: 150px
-
-
-
 
 
 
@@ -129,6 +134,11 @@
 				float: none
 	.testes-wrap::before, .so-good
 			display: none
+	.breakfast-content
+		background: rgba(0, 0,0, 0.5)
+		margin-bottom: 30px
+	.breakfast .breakfast-wrap .breakfast-content h4
+		padding-top: 30px
 			
 
 
@@ -140,7 +150,7 @@
 		padding-right: 15px
 		padding-left: 15px
 		h4 
-	    margin-top: 190px 
+	    margin-top: 220px
 	    margin-bottom: 10px
 	    line-height: 43px		
 		p
@@ -155,6 +165,23 @@
 	.readyin
 	 	width: 80px
 	 	height: 90px
+	.breakfast-menu
+		width: auto
+	.breakfast .breakfast-wrap .breakfast-content
+		padding: 0
+		h4
+			font-size: 40px
+		p
+			padding-bottom: 25px
+		.price
+			strong
+				font-size:  24px
+	.menu-composition 
+		h2
+			font-size: 32px
+			line-height: 1.2
+		p
+			padding: 20px 0 20px 0
 
 
 	.header-flex .flex-center .header-composition h1
