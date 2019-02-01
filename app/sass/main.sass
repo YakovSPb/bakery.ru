@@ -174,9 +174,10 @@ a:hover
 			&::after
 				content: "~"
 				position: absolute
-				right: -5px
+				right: -7px
 				top: 30px
 				color: #fff
+				font-size: 15px
 			&:last-child
 				&::after
 					content: ""
@@ -464,6 +465,7 @@ html.mm-opened
 
 .food-image
 	float: left
+	background-color: #fff
 	max-width: 410px
 	position: relative
 	clip-path: polygon(0 0,100% 0,100% 100%,50px 100%,0 450px)
@@ -808,7 +810,203 @@ html.mm-opened
 		z-index: 0
 		top: 44px
 
+//SECTION SANDWICH//
+.sandwich
+	background: #f3f1e9
+	min-height: 960px
+	background-image: url(../img/bg-field2.png)
+	background-repeat: no-repeat
+	background-position: center top
+	&__header
+		text-align: center
+		h2
+			padding-top: 100px
+			line-height: 1.2
+			padding-bottom: 14px
+		strong
+			display: block
+			text-transform: uppercase
+			color: $accent
+	&__component
+		text-align: center
+		float: left
+		width: 270px
+		&__item
+			padding-bottom: 55px
+			vertical-align: top
+			img
+				width: 90px
+				height: 90px
+				border-radius: 10em
+			b
+				display: block
+				color: $accent
+				font-size: 30px
+			p
+				line-height: 20px
 
+.sandwich-image
+	float: left
+	width: auto
+	height: auto
+	margin-left: 130px
+	border: #fff 10px solid
+	position: relative
+	margin-top: 80px
+	img
+		width: 100%
+		height: auto
+	.prep
+		width: 200px
+		right: 0
+		top: -33px
+		text-align: center
+		font-family: "Alegreya", sans-serif
+		font-weight: bold
+		height: 199px
+		position: absolute
+		background-color: rgba(255,255,255, .80)
+		border-top: #fff 33px solid
+		span
+			display: block
+			color: $accent
+			font-size: 18px
+			padding-top: 15px
+			text-transform: uppercase
+			letter-spacing: 1px
+		strong
+			font-size: 60px
+			letter-spacing: 1px
+			line-height: 20px
+			margin: 20px 0
+			display: block
+		p
+			color: #979285
+			letter-spacing: 1.2px
+	.prep:nth-child(2)
+		margin-top: 200px
+		border-top: 0
+		span
+			padding-top: 35px
+		p
+			padding-top: 5px
+	.prep:nth-child(3)
+		margin-top: 399px
+		border-top: 0
+		background-color: rgba(255,255,255, 1)
+		height: 247px
+		strong
+			color: #dfc691
+			font-size: 92px
+			padding-top: 20px
+		span
+			padding-top: 35px
+		p
+			padding-top: 15px
+
+
+//FOOTER//
+
+.footer .header-menu ul li a
+	color: $header
+	text-decoration: none
+.footer
+	text-align: center
+	background-color: #f3f1e9
+	padding: 60px 0
+	.header-menu
+		text-align: center
+	 ul 
+	 	display: flex
+	 	li 
+	 		flex-basis: auto
+	 		flex-grow: 1
+	 		text-align: center
+	 		border-top: #c2beba 1px solid
+	 		border-bottom: #c2beba 1px solid 
+	 		&:after
+	 			color: $header
+	 		&:nth-child(3)
+	 			&:after
+	 				display: none
+	 		&:nth-child(4)
+	 			border-top-color: transparent
+	 			border-bottom-color: transparent
+	 			line-height: 77px
+
+	 			a
+					font-family: Scriptina,sans-serif
+					font-size: 30px
+					letter-spacing: 3px
+					padding: 0
+					margin: 0
+					transition: all .5s ease
+					color: red
+					&:hover
+						opacity: .7
+	 			&:after
+	 				display: none
+
+.footer-logo
+	display: none
+	a
+		text-align: center
+		font-family: Scriptina,sans-serif
+		font-size: 30px
+		letter-spacing: 3px
+		transition: all .5s ease
+		color: $accent
+		&:hover
+			text-decoration: none 
+			opacity: .6
+
+//PRELOADER//
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.pulse
+	position: relative
+	left: 50%
+	top: 50vh
+	margin:
+		left: -40px
+		top: -40px
+	&::before, &::after
+		content: ''
+		border: 5px solid #323232
+		width: 80px
+		height: 80px
+		border-radius: 500px
+		position: absolute
+	&::before
+		animation: pulse-outer .8s ease-in infinite
+	&::after
+		animation: pulse-inner .8s linear infinite
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+
+	50%
+		@include opacity(50)
+
+	100%
+		@include opacity(0)
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+
+	100%
+		@include opacity(100)
+		transform: scale(1)
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	z-index: 10000
+	background-color: #000
 
 
 //Don't forget remove

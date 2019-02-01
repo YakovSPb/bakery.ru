@@ -1,6 +1,8 @@
 $(function() {
 
 
+$(".sandwich__component__item p").equalHeights(); 
+
 //SLIDER//
   $(".next").click(function() {
     $('.slider2').trigger('next.owl.carousel');
@@ -112,14 +114,14 @@ $(function(){
 
 
 
-$(window).resize(function() {
-    if(document.documentElement.clientWidth < 1200) {
+
         $('#my-menu').mmenu({
             extensions: ['theme-black', 'effect-menu-slide', 'pagedim-black', 'position-right'],
             navbar: {
                 title: '<div class="logo">Gustoso</div>'
             }
         });
-    }
-});
 
+$(window).on('load', function(){
+    $('.preloader').delay(1000).fadeOut('slow');
+})
